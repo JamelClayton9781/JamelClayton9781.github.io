@@ -34,12 +34,15 @@ var init = function (window) {
 
 
         // TODO 3 : Call the drawCircle() function
-        drawCircle(5)
+       
+        //drawCircle(5)
 
 
         // TODO 7 : Use a loop to create multiple circles
 
-
+        for (var i = 0; i < 25; i++) {
+        drawCircle(25)
+        }
 
 
         ///////////////////
@@ -54,19 +57,23 @@ var init = function (window) {
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
             circles[0]
-            physikz.updatePosition(0);
-            physikz.updatePosition(1);
-            physikz.updatePosition(2);
-            physikz.updatePosition(3);
-            physikz.updatePosition(4);
+            //physikz.updatePosition(0);
+           // physikz.updatePosition(1);
+           // physikz.updatePosition(2);
+            //physikz.updatePosition(3);
+            //physikz.updatePosition(4);
             // TODO 5 : Call game.checkCirclePosition() on your circles
-           game.checkCirclePosition()
-            game.checkCirclePosition()
-            game.checkCirclePosition()
-            game.checkCirclePosition()
-            game.checkCirclePosition()
+          // game.checkCirclePosition(1)
+           // game.checkCirclePosition(90)
+           // game.checkCirclePosition(3)
+           // game.checkCirclePosition(4)
+           // game.checkCirclePosition(50)
             // TODO 8 / TODO 9 : Iterate over the array
-           
+           for (var i = 0; i < circles.length; i++) {
+           physikz.updatePosition(i);
+           game.checkCirclePosition
+           circles[i]
+        }   
             
         }
     
@@ -79,7 +86,7 @@ var init = function (window) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if ( circle.x > canvas.width ) {
-                circle.x = 0;
+                circle.x = 10;
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
